@@ -9,7 +9,10 @@ const incTime = () => {
 
 console.log(`setting a ${waitTime / 1000} second delay`);
 
-const timerFinished = () => console.log(`done`);
+const timerFinished = () => {
+    clearInterval(interval);
+    console.log(`done`);
+}
 
-setInterval(incTime, waitInterval);
+const interval = setInterval(incTime, waitInterval);
 setTimeout(timerFinished, waitTime);
