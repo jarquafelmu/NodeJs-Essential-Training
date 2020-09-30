@@ -1,5 +1,5 @@
 const path = require(`path`);
-const util = require(`util`);
-const v8 = require(`v8`);
+const { log } = require(`util`);
+const { getHeapCodeStatistics } = require(`v8`);
 
-util.log(v8.getHeapCodeStatistics())
+log(getHeapCodeStatistics());
