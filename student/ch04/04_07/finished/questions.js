@@ -15,5 +15,6 @@ answerEvents.on(`answer`, answer => {
 answerEvents.on(`complete`, answers => {
     console.log(`Thank you for your answers. `);
     console.log(answers);
-    process.exit();
 });
+
+answerEvents.on(`complete`, () => process.exit());
