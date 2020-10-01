@@ -4,7 +4,8 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-module.exports = (questions, done) => {
+// dummy function assigned to done by default to protect code
+module.exports = (questions, done = f => f) => {
     const answers = [];
     const [firstQuestion] = questions;
 
