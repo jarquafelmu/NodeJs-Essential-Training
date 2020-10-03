@@ -1,7 +1,8 @@
 const fs = require(`fs`);
 
 const writeStream = fs.createWriteStream(`./assets/myFile.txt`, `utf8`);
+const readStream = fs.createReadStream(`./assets/lorum-ipsum.md`, `utf8`);
 
-process.stdin.on(`data`, data => {
+readStream.on(`data`, data => {
     writeStream.write(data);
 })
